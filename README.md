@@ -1,10 +1,10 @@
 #VMware vRealize Operations Manager Hacks
 
-This repository is a collection of several scripts that I wrote to hack/modify vROps while working for Blue Medora, a company that was partnered with VMware. 
+This repository is a collection of several scripts that I wrote to hack/modify vROps while working for Blue Medora, a company that was partnered with VMware. All scripts are tested and work on vROps 6.2, 6.3, and 6.4. 
 
 ##enterhvm.sh
 
-This script is intended to automagically convert an instance of vROps 6.2.1 from normal mode to Historical View Mode (HVM). In addition to modifying the system date and relevant config directives to enter HVM, it also does several other things that increase the qualify, performance and speed of vROps in HVM. It accepts two parameters (HVM Start Time and the Time Interval). A cronjob to maintain vROps place in HVM is generated, it disables NTP to prevent vROps from removing itself from HVM, and it bumps the capacity interval up from once per 24 hours to a every 15 minutes.    
+This script is intended to automagically convert an instance of vROps from normal mode to Historical View Mode (HVM). In addition to modifying the system date and relevant config directives to enter HVM, it also does several other things that increase the qualify, performance and speed of vROps in HVM. It accepts two parameters (HVM Start Time and the Time Interval). A cronjob to maintain vROps place in HVM is generated, it disables NTP to prevent vROps from removing itself from HVM, and it bumps the capacity interval up from once per 24 hours to a every 15 minutes.    
 
 Date passed to this script must be formatted as follows: MM/DD/YYY HH:MM and the interval time must be a positve integer value. Example: ./setdate.sh '06/30/2016 14:30' 30  will place the box into HVM between the period of 2:30PM and 3:00PM on the 30th of June, 2016. Time provided to this script should be provided in UTC as vROps natively runs in UTC at the system level.  
 
