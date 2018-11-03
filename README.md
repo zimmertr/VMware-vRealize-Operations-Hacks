@@ -1,6 +1,6 @@
 # VMware vRealize Operations Manager Hacks
 
-This repository is a collection of several scripts that I wrote to hack/modify vROps while working for Blue Medora, a company that was partnered with VMware. All scripts are tested and work on vROps 6.2, 6.3, and 6.4. 
+This repository is a collection of several scripts that I wrote to hack/modify vROps. All scripts are tested and work on vROps 6.2, 6.3, and 6.4. 
 
 ## enterhvm.sh
 
